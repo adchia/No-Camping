@@ -52,7 +52,7 @@ public class DashboardFragment extends Fragment implements BadgeClickListener {
 
   @Override
   public void onBadgeClicked(Badge badge) {
-    new BadgeInfoFragment().show(getFragmentManager(), "BadgeInfoFragment");
+    BadgeInfoFragment.newInstance(badge).show(getFragmentManager(), "BadgeInfoFragment");
   }
 
   class ViewPagerAdapter extends FragmentPagerAdapter {

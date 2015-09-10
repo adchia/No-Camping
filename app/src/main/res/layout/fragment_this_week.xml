@@ -6,6 +6,8 @@
     <TextView
         android:id="@+id/week_title"
         android:background="@drawable/dotted_bottom"
+        android:drawableLeft="@drawable/ic_week"
+        android:drawablePadding="10dp"
         android:text="Week of September 6th-12th"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="15dp"

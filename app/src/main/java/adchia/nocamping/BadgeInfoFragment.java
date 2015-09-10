@@ -30,7 +30,7 @@ public class BadgeInfoFragment extends DialogFragment {
   private TextView badgeBlurbView;
   private TextView badgeExplanationView;
 
-  BadgeInfoFragment newInstance(Badge badge) {
+  static BadgeInfoFragment newInstance(Badge badge) {
     BadgeInfoFragment fragment = new BadgeInfoFragment();
     Bundle bundle = new Bundle();
     bundle.putSerializable(BADGE_KEY, badge);
