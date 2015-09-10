@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * A fragment that contains the this week and history views.
  */
-public class DashboardFragment extends Fragment {
+public class DashboardFragment extends Fragment implements BadgeClickListener {
 
   @Nullable
   @Override
@@ -45,9 +45,14 @@ public class DashboardFragment extends Fragment {
 
   private void setupViewPager(ViewPager viewPager) {
     ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
-    adapter.addFrag(new ThisWeekFragment(), "THIS WEEK");
-    adapter.addFrag(new HistoryFragment(), "HISTORY");
+    adapter.addFrag(ThisWeekFragment.newInstance(this), "THIS WEEK");
+    adapter.addFrag(HistoryFragment.newInstance(this), "HISTORY");
     viewPager.setAdapter(adapter);
+  }
+
+  @Override
+  public void onBadgeClicked(Badge badge) {
+    new BadgeInfoFragment().show(getFragmentManager(), "BadgeInfoFragment");
   }
 
   class ViewPagerAdapter extends FragmentPagerAdapter {

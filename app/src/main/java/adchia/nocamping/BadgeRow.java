@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,6 +25,8 @@ public class BadgeRow extends FrameLayout {
     super(context, attrs);
   }
 
+
+
   @Override
   protected void onFinishInflate() {
     super.onFinishInflate();
@@ -33,9 +36,15 @@ public class BadgeRow extends FrameLayout {
     badgeCount = (TextView) findViewById(R.id.history_badge_count);
   }
 
-  public void setBadge(Badge badge, int count) {
+  public void setBadge(final Badge badge, int count, final BadgeClickListener listener) {
     badgeIcon.setImageResource(badge.getDrawableId());
-    badgeTitle.setText(badge.getBadgeName());
+    badgeIcon.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        listener.onBadgeClicked(badge);
+      }
+    });
+    badgeTitle.setText(badge.getBadgeName(getResources()));
     badgeCount.setText(Integer.toString(count));
     if (count > 10) {
       badgeCount.getBackground().setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP);

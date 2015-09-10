@@ -3,4 +3,42 @@
 
     <string name="welcome_text">No Camping is about fun, passive discovery of your location patterns
         in the office.\n\nWtf does that mean?\nLog in, go about your day, and find out!</string>
+
+
+    <string name="no_camping_name">No Camping badge</string>
+    <string name="no_camping_blurb">The journey of a thousand miles begins with one step.</string>
+    <string name="no_camping_explanation">Now stop staring at your screen, close this app, and go on with your day!</string>
+
+    <string name="foodie_name">Foodie badge</string>
+    <string name="foodie_blurb">Stay hungry, stay foolish.</string>
+    <string name="foodie_explanation">Earned by visiting all the cafes in NYC in a week</string>
+
+    <string name="playa_name">Playa badge</string>
+    <string name="playa_blurb">Reserved for only the most l337 pwners. Game on, playa!</string>
+    <string name="playa_explanation">Earned by spending a lot of time in the Game Room</string>
+
+    <string name="listener_name">Listener badge</string>
+    <string name="listener_blurb">Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.</string>
+    <string name="listener_explanation">Earned by spending a lot of time in tech talk rooms</string>
+
+    <string name="water_name">Water Coolie badge</string>
+    <string name="water_blurb">Studies show that more information is passed through watercooler gossip than through official memos…</string>
+    <string name="water_explanation">Earned by staying loyal to the Water Tower</string>
+
+    <string name="coffee_name">Coffee Addict badge</string>
+    <string name="coffee_blurb">Everyone should believe in something. I believe I’ll have another coffee.</string>
+    <string name="coffee_explanation">Earned by being addicted to 5BB</string>
+
+    <string name="laplacian_name">Laplacian badge</string>
+    <string name="laplacian_blurb">Life, liberty, and the pursuit of Laplaciness</string>
+    <string name="laplacian_explanation">Earned by consistently deriving sustenance from La Place</string>
+
+    <string name="jet_setter_name">Jet Setter badge</string>
+    <string name="jet_setter_blurb">Making magic happen across the world. Take care, jet setter!</string>
+    <string name="jet_setter_explanation">Earned by visiting more than two offices in different countries in a week</string>
+
+    <string name="meeting_name">Meeting Monster badge</string>
+    <string name="meeting_blurb">For some, meetings are a waste of time. For others, they’re a way of life.</string>
+    <string name="meeting_explanation">Earned by spending way too much time in meetings</string>
+
 </resources>
