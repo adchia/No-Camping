@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
-              android:background="@android:color/black"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <TextView
@@ -13,56 +12,18 @@
         android:padding="8dp"
         style="@style/ThisWeekTitle"/>
 
-    <include layout="@layout/this_week_insight"
-             android:id="@+id/favorite_meeting" />
-
-    <include layout="@layout/this_week_insight"
-             android:id="@+id/favorite_cafe" />
-
-    <include layout="@layout/this_week_insight"
-             android:id="@+id/time_in_meetings" />
-
     <LinearLayout
-        android:columnCount="3"
+        android:id="@+id/week_insights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <adchia.nocamping.flow.FlowLayout
+        android:id="@+id/this_week_badges"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="40dp"
-        android:paddingRight="40dp">
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/coffee_copy"
-            android:layout_row="0"
-            android:layout_column="0"/>
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/foodie"
-            android:layout_row="0"
-            android:layout_column="1"/>
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/french"
-            android:layout_row="0"
-            android:layout_column="2"/>
-
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/coffee_copy"
-            android:layout_row="1"
-            android:layout_column="1"/>
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/coffee_copy"
-            android:layout_row="1"
-            android:layout_column="2"/>
-    </LinearLayout>
+        android:paddingRight="40dp"
+        android:gravity="center"/>
 
 </LinearLayout>

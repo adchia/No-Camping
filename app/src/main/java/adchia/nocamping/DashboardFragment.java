@@ -7,8 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by adchia on 9/10/15.
+ * A fragment that contains the this week and history views.
  */
 public class DashboardFragment extends Fragment {
 
@@ -26,8 +24,6 @@ public class DashboardFragment extends Fragment {
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     View view = inflater.inflate(R.layout.dashboard, container, false);
 
-    Toolbar toolbar = (Toolbar) view.findViewById(R.id.tabanim_toolbar);
-    ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
     final ViewPager viewPager = (ViewPager) view.findViewById(R.id.tabanim_viewpager);
     setupViewPager(viewPager);
     TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabanim_tabs);
@@ -39,20 +35,18 @@ public class DashboardFragment extends Fragment {
       }
 
       @Override
-      public void onTabUnselected(TabLayout.Tab tab) {
-      }
+      public void onTabUnselected(TabLayout.Tab tab) {}
 
       @Override
-      public void onTabReselected(TabLayout.Tab tab) {
-      }
+      public void onTabReselected(TabLayout.Tab tab) {}
     });
     return view;
   }
 
   private void setupViewPager(ViewPager viewPager) {
     ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
-    adapter.addFrag(new DummyFragment(), "THIS WEEK");
-    adapter.addFrag(new DummyFragment(), "HISTORY");
+    adapter.addFrag(new ThisWeekFragment(), "THIS WEEK");
+    adapter.addFrag(new ThisWeekFragment(), "HISTORY");
     viewPager.setAdapter(adapter);
   }
 
