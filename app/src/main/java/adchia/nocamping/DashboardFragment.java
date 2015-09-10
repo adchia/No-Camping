@@ -22,7 +22,7 @@ public class DashboardFragment extends Fragment {
   @Nullable
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    View view = inflater.inflate(R.layout.dashboard, container, false);
+    View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
     final ViewPager viewPager = (ViewPager) view.findViewById(R.id.tabanim_viewpager);
     setupViewPager(viewPager);
@@ -46,7 +46,7 @@ public class DashboardFragment extends Fragment {
   private void setupViewPager(ViewPager viewPager) {
     ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
     adapter.addFrag(new ThisWeekFragment(), "THIS WEEK");
-    adapter.addFrag(new ThisWeekFragment(), "HISTORY");
+    adapter.addFrag(new HistoryFragment(), "HISTORY");
     viewPager.setAdapter(adapter);
   }
 

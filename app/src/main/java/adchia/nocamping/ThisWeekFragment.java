@@ -18,7 +18,7 @@ public class ThisWeekFragment extends Fragment {
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    View view = inflater.inflate(R.layout.this_week, container, false);
+    View view = inflater.inflate(R.layout.fragment_this_week, container, false);
     insightsView = (ViewGroup) view.findViewById(R.id.week_insights);
     badgesView = (ViewGroup) view.findViewById(R.id.this_week_badges);
     badges.add(Badge.COFFEE);
@@ -43,7 +43,7 @@ public class ThisWeekFragment extends Fragment {
 
   private void addInsight(LayoutInflater inflater, String title, String value) {
     InsightView insightView = (InsightView) inflater.inflate(
-        R.layout.this_week_insight, null);
+        R.layout.this_week_insight, insightsView, false);
     insightView.setTitle(title);
     insightView.setValue(value);
     insightsView.addView(insightView);
